@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BagbackJack</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/images_logo/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+    <!--NAVEGACIÓN-->
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="#" class="resaltado">Inicio</a>
+            </li>
+            <li>
+                <a href="./view/galeria.html">Galería</a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/images_logo/main-logo.png" alt="Logotipo de BagbackJack"></a>
+            </li>
+            <li>
+                <a href="./view/presupuesto.html">Presupuesto</a>
+            </li>
+            <li>
+                <a href="./view/contacto.html">Contacto</a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/images_sources/shopping-car.jpg" alt="icon carrito de la compra" id="carrito-compra"></a>
+            </li>
+        </ul>
+    </div>
+
+    </header>
+
+    <main>
+        <!--Sección Black Friday-->
+        <div id="enlace-blackFriday">
+            <div class="container-blackFriday">
+                <img src="./images/images_sources/Black-Friday-event.jpg" alt="Imagen ofertas Black Friday" class="blackFriday">
+                <div class="blackFriday">
+                    <h3>Ofertas del Viernes Negro</h3>
+                    <h4>Obtén acceso a nuestros descuentos antes que nadie pinchando</h4>
+                    <a href="#">AQUÍ</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Sección carousel-->
+        <div id="contenedor-carusel" class="animado">
+            <div id="carousel-galeria">
+                <div id="carousel-menu-main">
+                    <div id="carousel-menu" class="carousel-element">
+                        <span id="texto1-Actual" ></span>
+                        <span id="texto2-Actual"></span>
+                    </div>
+                        <button id="boton-1" data-previous-text="" data-next-text=""></button>
+                        <button id="boton-2" data-previous-text="" data-next-text=""></button>
+                </div>
+                <div id="image"></div>
+    
+            </div>
+        </div>
+        <!--Sección Nuesto catalogo-->
+        <div class="index-item" id="nuestro-catálogo">
+            <div class="caja-nuestro-catálogo"><a href="#"><h3>Vuelta al cole con BagBack</h3></a></div>
+            <div class="caja-nuestro-catálogo"><a href="#"><h3>Lo mejor de BagbackJack</h3></a></div>
+            <div class="caja-nuestro-catálogo"><a href="#"><h3>Para los trotamundos</h3></a></div>
+            <div class="caja-nuestro-catálogo"><a href="#"><h3>Colecciones y originales</h3></a></div>
+        </div>
+        <!--Sección JSON-->
+        <div id="archivo-json" class="index-item"></div>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="pie_pag" id="div_bloque">
+            <div class="caja_pie_pag" id="div-correo">
+                <input type="text" value="Suscríbete a nuestra newsletter" id="input-correo">
+                <button>Suscribirse</button>
+            </div>
+            <div class="caja_pie_pag" id="direccion">
+                BagBackJack©<br>
+                +34 941 54 54 87<br>
+                Calle Pepito de los Palotes 4<br>
+                Málaga, España<br>
+                54865
+            </div>
+        <!--rrss-->
+            <div class="caja_pie_pag" id="rrss-block">
+                <a href=""><img src="./images/social_media/linkedin.png" class="social_icon" alt="Logotipo de LinkedIn"></a>
+                <a href=""><img src="./images/social_media/twitter.png" class="social_icon" alt="Logotipo de Twitter"></a>
+                <a href=""><img src="./images/social_media/insta.png" class="social_icon" alt="Logotipo de Instagram"></a>
+                <a href=""><img src="./images/social_media/facebook.png" class="social_icon" alt="Logotipo de Facebook"></a>
+            </div>
+        </div>
+        <div class="pie_pag">
+            <div>
+                <a href="#" class="caja_pie_pag">Contacto</a>
+                <a href="#" class="caja_pie_pag">Política de privacidad</a>
+                <a href="#" class="caja_pie_pag">Quiénes somos</a>
+                <a href="#" class="caja_pie_pag">Nuestro compromiso</a>
+            </div>
+        </div>
+        <div class="pie_pag">
+            <div>
+                <h4 class="caja_pie_pag">Colecciones</h4>
+                <a href="#" class="caja_pie_pag">Montaña</a>
+                <a href="#" class="caja_pie_pag">Mar</a>
+                <a href="#" class="caja_pie_pag">Para estudiantes</a>
+                <a href="#" class="caja_pie_pag">Vintage</a>
+            </div>
+        </div>
+        <div class="pie_pag">
+            <div>
+                <h4 class="caja_pie_pag">Atención al cliente</h4>
+                <a href="#" class="caja_pie_pag">Preguntas más frecuentes</a>
+                <a href="#" class="caja_pie_pag">Devolución y reembolso</a>
+                <a href="#" class="caja_pie_pag">Rastrear mi pedido</a>
+                <a href="#" class="caja_pie_pag">Condiciones de envío</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>2024 BagBackJack© Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+    <!--SCRIPT-->
+    <script type="module" src="./js/script.js"></script>
+
+</body>
+</html>
