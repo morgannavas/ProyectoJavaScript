@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BagbackJack | Contacto</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/images_logo/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+    <!--NAVEGACIÓN-->
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="./galeria.html">Galería</a>
+            </li>
+            <li>
+                <a href="#"><img src="../images/images_logo/main-logo.png" alt="Logotipo de BagbackJack"></a>
+            </li>
+            <li>
+                <a href="./presupuesto.html">Presupuesto</a>
+            </li>
+            <li>
+                <a href="#" class="resaltado">Contacto</a>
+            </li>
+            <li>
+                <a href="#"><img src="../images/images_sources/shopping-car.jpg" alt="icon carrito de la compra" id="carrito-compra"></a>
+            </li>
+        </ul>
+    </div>
+
+    </header>
+
+    <main>
+        <!--CONTACTO/MAPA-->
+    <div id="contacto-main" class="animado">
+        <h3>Encuentra nuestras sedes alrededor de España </h3>
+        <div class="contenedor-contacto">
+            <div class="contacto-colum-1">
+                <!--Aquí el mapa de OpenStreet-->
+                <div id="mapita" onload="mapa()">
+                </div>
+            </div>
+                <!--Apartado con direcciones de la sede-->
+            <div class="contacto-colum-2">
+                <h4>¡Nos encanta estar más cerca de ti!<br> Aquí te dejamos una lista de nuestras ubicaciones para que nos visites cuando quieras:</h4>
+                    <p class="sede">📍 Madrid <br>
+
+                        Dirección: Calle Gran Vía 123, Madrid<br>
+                        Horario: Lunes a sábado, 10:00 am - 9:00 pm<br>
+                    </p>
+
+                    <p class="sede">📍 Barcelona<br>
+
+                        Dirección: Passeig de Gràcia 456, Barcelona<br>
+                        Horario: Todos los días, 10:00 am - 8:30 pm<br>
+                    </p>
+                    <p class="sede">📍 Sevilla<br>
+                        
+                        Dirección: Avenida de la Constitución 789, Sevilla<br>
+                        Horario: Lunes a viernes, 9:00 am - 7:30 pm<br>
+
+                    </p>
+                    <p class="sede">📍 Valencia<br>
+                        
+                        Dirección: Plaza del Ayuntamiento 101, Valencia<br>
+                        Horario: Lunes a sábado, 10:00 am - 8:00 pm<br>
+                    </p>
+                    <p class="sede">📍 Bilbao<br>
+                        
+                        Dirección: Calle Gran Vía Don Diego López de Haro 234, Bilbao<br>
+                        Horario: Lunes a domingo, 10:30 am - 7:30 pm<br>
+
+                    </p>
+                    <p class="sede">📍 Málaga<br>
+                        
+                        Dirección: Calle Marqués de Larios 567, Málaga<br>
+                        Horario: Todos los días, 11:00 am - 8:00 pm<br>
+                    </p>
+            </div>
+        </div>
+    </div>
+    <div class="otras-sedes">
+        <p>🗺️ ¿No ves una sede cerca de ti?<br>
+        ¡No te preocupes! Siempre puedes explorar nuestra tienda en línea y disfrutar del envío rápido dentro de toda España. 🚀<br>
+        Nos emociona verte en cualquiera de nuestras sedes. 🌟<br>
+        ¡Tu próxima aventura comienza aquí!
+
+        </p>
+    </div>
+
+    </main>
+
+
+        <!--FOOTER-->
+        <footer>
+            <div class="pie_pag" id="div_bloque">
+                <div class="caja_pie_pag" id="div-correo">
+                    <input type="text" value="Suscríbete a nuestra newsletter" id="input-correo">
+                    <button>Suscribirse</button>
+                </div>
+                <div class="caja_pie_pag" id="direccion">
+                    BagBackJack©<br>
+                    +34 941 54 54 87<br>
+                    Calle Pepito de los Palotes 4<br>
+                    Málaga, España<br>
+                    54865
+                </div>
+                <!--rrss-->
+                <div class="caja_pie_pag" id="rrss-block">
+                    <a href=""><img src="../images/social_media/linkedin.png" class="social_icon" alt="Logotipo de LinkedIn"></a>
+                    <a href=""><img src="../images/social_media/twitter.png" class="social_icon" alt="Logotipo de Twitter"></a>
+                    <a href=""><img src="../images/social_media/insta.png" class="social_icon" alt="Logotipo de Instagram"></a>
+                    <a href=""><img src="../images/social_media/facebook.png" class="social_icon" alt="Logotipo de Facebook"></a>
+                </div>
+            </div>
+            <div class="pie_pag">
+                <a href="#" class="caja_pie_pag">Contacto</a>
+                <a href="#" class="caja_pie_pag">Política de privacidad</a>
+                <a href="#" class="caja_pie_pag">Quiénes somos</a>
+                <a href="#" class="caja_pie_pag">Nuestro compromiso</a>
+            </div>
+            <div class="pie_pag">
+                <h4 class="caja_pie_pag">Colecciones</h4>
+                <a href="#" class="caja_pie_pag">Montaña</a>
+                <a href="#" class="caja_pie_pag">Mar</a>
+                <a href="#" class="caja_pie_pag">Para estudiantes</a>
+                <a href="#" class="caja_pie_pag">Vintage</a>
+            </div>
+            <div class="pie_pag">
+                <h4 class="caja_pie_pag">Atención al cliente</h4>
+                <a href="#" class="caja_pie_pag">Preguntas más frecuentes</a>
+                <a href="#" class="caja_pie_pag">Devolución y reembolso</a>
+                <a href="#" class="caja_pie_pag">Rastrear mi pedido</a>
+                <a href="#" class="caja_pie_pag">Condiciones de envío</a>
+            </div>
+            <div class="copyright">
+                <p>2024 BagBackJack© Todos los derechos reservados</p>
+            </div>
+        </footer>
+
+    <!--SCRIPT-->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <script type="module" src="../js/sources/map.js"></script>
+
+</body>
+</html>
