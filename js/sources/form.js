@@ -66,9 +66,16 @@ document.addEventListener('DOMContentLoaded', function manejarFormulario() {
 
 
         // Validacion 'producto'
-        if (!radiobuttons.checked) {
+        let seleccionado = false;
+        for (let i = 0; i < radiobuttons.length; i++) {
+            if (radiobuttons[i].checked) {
+                seleccionado = true;
+                break;
+            }
+        }
+        if (!seleccionado) {
             productoerror.textContent = 'Debes seleccionar una opción de producto';
-            return false
+            return false;
         } else {
             productoerror.textContent = '';
         }
