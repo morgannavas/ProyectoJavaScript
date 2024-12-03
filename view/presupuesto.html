@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BagbackJack | Presupuesto</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/images_logo/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+    <!--NAVEGACIÓN-->
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="./galeria.html">Galería</a>
+            </li>
+            <li>
+                <a href="../index.html"><img src="../images/images_logo/main-logo.png" alt="Logotipo de BagbackJack"></a>
+            </li>
+            <li>
+                <a href="#" class="resaltado">Presupuesto</a>
+            </li>
+            <li>
+                <a href="./contacto.html">Contacto</a>
+            </li>
+            <li>
+                <a href="#"><img src="../images/images_sources/shopping-car.jpg" alt="icon carrito de la compra" id="carrito-compra"></a>
+            </li>
+        </ul>
+    </div>
+
+    </header>
+
+    <main>
+        <div class="presupuestointro">
+            <p>Nos encanta tenerte satisfecho. <br>
+            Es por eso que en BagBackJack queremos que tu mochila sea única y adaptada a todas tus necesidades. <br>
+            ¡Es hora de que creemos la tuya! <br>
+        </div>
+        <!--FORMULARIO-->
+        <div class="cajaformulario">
+            <form name="formulario" class="animado" id="formulario" method="GET">
+                <!--DATOS DE CONTACTO-->
+                <br>
+                <p>Para empezar, dinos un poco sobre ti </p><br>
+                <p>Nombre: <input type="text" name="Nombre" id="nombre" class="campotexto"></p>
+                <span class="error" id="nombreerror"></span> <br>
+                <p>Primer apellido: <input type="text" name="Apellidos" id="apellidos" class="campotexto"></p>
+                <span class="error" id="apellidoerror"></span> <br>
+                <p>Teléfono de contacto: <input type="text" name="Telefono" id="telefono" class="campotexto"></p>
+                <span class="error" id="telefonoerror"></span> <br>
+                <p>Correo electrónico: <input type="text" name="email" id="email" class="campotexto"></p>
+                <span class="error" id="emailerror"></span> <br>
+                
+                <!--DATOS PARA PRESUPUESTO-->
+                    <p>Estupendo!
+                        Y ahora dinos, ¿cuál es el tamaño ideal para tu mochila?
+                    </p><br>
+                    <!--Presupuesto-->
+                    <h4>Elige entre las siguientes opciones:</h4> <br>
+                    <ul>
+                        <li>
+                            <!--Producto-->
+                            <div>
+                                <div class="tamaño-producto">
+                                    <input type="radio" name="tamano" class="radiobuttons" id="grande" value="35"> Grande
+                                    <img src="../images/images_producto/grande.jpg" alt="Foto de ejemplo de mochila grande"><br>
+                                </div>
+                                <div class="tamaño-producto">
+                                    <input type="radio" name="tamano" class="radiobuttons" id="mediana" value="25"> Mediana
+                                    <img src="../images/images_producto/mediana.jpg" alt="Foto de ejemplo de mochila mediana"><br>
+                                </div>
+                                <div class="tamaño-producto">
+                                    <input type="radio" name="tamano" class="radiobuttons" id="pequeña" value="15"> Pequeña
+                                    <img src="../images/images_producto/pequeña.jpg" alt="Foto de ejemplo de mochila pequeña"><br>
+                                </div>
+                                <span class="error" id="productoerror"></span> <br>
+                            </div>
+                        </li>
+                        <li>
+                            <!--Plazo-->
+                            <p>¿Cuántas veces quieres recibir tu pedido?</p> <br>
+                            <input type="number" name="date" id="plazo" value="1"> <br>
+    
+                        </li>
+                        <li>
+                            <!--Extras-->
+                            <p>Otros extras:</p><br>
+                                <label><input type="checkbox" name="cbox[]" class="cbox[]" id="sujeta_cadera" value="30">Sujeción de cadera
+                                    <img src="../images/images_producto/sujecion-de-cadera.jpg" alt="Mochila con sujeción de cadera"></label><br>
+                                <label><input type="checkbox" name="cbox[]" class="cbox[]" id="bolsillo_lateral" value="22">Bolsillo lateral para botella
+                                    <img src="../images/images_producto/bolsillo-lateral.jpg" alt="Mochila con bolsillo lateral"></label><br>
+                                <label><input type="checkbox" name="cbox[]" class="cbox[]" id="compartimento_portatil" value="25">Compartimento para portátil
+                                    <img src="../images/images_producto/compartimento-portatil.jpg" alt="Mochila con compartimento para portátil"></label><br>
+                                <label><input type="checkbox" name="cbox[]" class="cbox[]" id="asa_lateral" value="20">Asa lateral
+                                    <img src="../images/images_producto/asa-lateral.jpg" alt="Mochila con asa lateral"></label><br>
+                                <span class="error" id="checkboxerror"></span><br>
+                        </li>
+                    </ul>
+                    <p>¡Genial! <br>
+                        Aquí te dejamos el precio final de tu producto:
+                    </p><br>
+                    <!--Precio final del producto-->
+                    <input type="text" name="precio_final" id="precio_final" readonly onload="consultaprecio()">
+                    <br>
+                    <p>Para confirmar que quieres seguir adelante con el envío, mándanos este formulario y contactaremos contigo en breves. </p><br>
+                    <p><input type="checkbox" name="politica" id="politica"> He leído y acepto la <a href="">política de privacidad </a></p><br>
+                    <span class="error" id="politicaerror"></span><br>
+                    <!--Envio form-->
+                    <input type="submit" value="Envío de formulario" name="envio" id="envio" class="formbutton">
+                    <input type="reset" value="Borrar formulario" class="formbutton">
+            </form>
+        </div>
+    </main>
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="pie_pag" id="div_bloque">
+            <div class="caja_pie_pag" id="div-correo">
+                <input type="text" value="Suscríbete a nuestra newsletter" id="input-correo">
+                <button>Suscribirse</button>
+            </div>
+            <div class="caja_pie_pag" id="direccion">
+                BagBackJack©<br>
+                +34 941 54 54 87<br>
+                Calle Pepito de los Palotes 4<br>
+                Málaga, España<br>
+                54865
+            </div>
+            <!--rrss-->
+            <div class="caja_pie_pag" id="rrss-block">
+                <a href=""><img src="../images/social_media/linkedin.png" class="social_icon" alt="Logotipo de LinkedIn"></a>
+                <a href=""><img src="../images/social_media/twitter.png" class="social_icon" alt="Logotipo de Twitter"></a>
+                <a href=""><img src="../images/social_media/insta.png" class="social_icon" alt="Logotipo de Instagram"></a>
+                <a href=""><img src="../images/social_media/facebook.png" class="social_icon" alt="Logotipo de Facebook"></a>
+            </div>
+        </div>
+        <div class="pie_pag">
+                <a href="#" class="caja_pie_pag">Contacto</a>
+                <a href="#" class="caja_pie_pag">Política de privacidad</a>
+                <a href="#" class="caja_pie_pag">Quiénes somos</a>
+                <a href="#" class="caja_pie_pag">Nuestro compromiso</a>
+        </div>
+        <div class="pie_pag">
+                <h4 class="caja_pie_pag">Colecciones</h4>
+                <a href="#" class="caja_pie_pag">Montaña</a>
+                <a href="#" class="caja_pie_pag">Mar</a>
+                <a href="#" class="caja_pie_pag">Para estudiantes</a>
+                <a href="#" class="caja_pie_pag">Vintage</a>
+        </div>
+        <div class="pie_pag">
+                <h4 class="caja_pie_pag">Atención al cliente</h4>
+                <a href="#" class="caja_pie_pag">Preguntas más frecuentes</a>
+                <a href="#" class="caja_pie_pag">Devolución y reembolso</a>
+                <a href="#" class="caja_pie_pag">Rastrear mi pedido</a>
+                <a href="#" class="caja_pie_pag">Condiciones de envío</a>
+        </div>
+        <div class="copyright">
+            <p>2024 BagBackJack© Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!--SCRIPT-->
+    <script type="module" src="../js/sources/form.js"></script>
+</body>
+</html>
